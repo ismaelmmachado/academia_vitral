@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Ensino - Comunidade Vitral</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #005f6b, #94a69a);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #005f6b;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #005f6b;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #004752;
+        }
+        
+        .sections {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #005f6b;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .track-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #005f6b;
+        }
+        
+        .track-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .track-header {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .track-header h3 {
+            color: #005f6b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .track-header p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .track-content {
+            padding: 1.5rem;
+        }
+        
+        .track-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .track-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .track-stats {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tracks-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">🏛️</div>
+                <div>
+                    <h2>Comunidade Vitral</h2>
+                    <p>Academia de Ensino</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Trilhas</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Academia de Ensino da Comunidade Vitral</h1>
+            <p>Um portal de aprendizado que reúne nossas trilhas de formação para ajudar você a crescer na fé e no serviço ao Reino de Deus.</p>
+            <a href="#tracks" class="btn">Explore as Trilhas</a>
+        </div>
+    </section>
+
+    <section class="sections" id="tracks">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossas Trilhas de Formação</h2>
+                <p>Selecione a trilha que melhor se adapta à sua jornada espiritual e comece a crescer hoje.</p>
+            </div>
+            
+            <div class="tracks-grid">
+                <!-- Trilha de Novos -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <h3>Trilha de Novos</h3>
+                        <p>Para quem está começando a caminhada</p>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-details">
+                            <span>9 encontros</span>
+                            <span>Iniciante</span>
+                        </div>
+                        <p class="track-description">
+                            Uma jornada fundamental para novos crentes, focada em identidade em Cristo, pertencimento à comunidade e primeiros passos na caminhada de discipulado.
+                        </p>
+                        <div class="track-stats">
+                            <span>📖 Apostilas</span>
+                            <span>💬 Reflexões</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Começar</a>
+                    </div>
+                </div>
+                
+                <!-- Trilha Praticando o Caminho -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <h3>Trilha Praticando o Caminho</h3>
+                        <p>Crescendo em fé e serviço</p>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-details">
+                            <span>17 passos</span>
+                            <span>Intermediário</span>
+                        </div>
+                        <p class="track-description">
+                            Desenvolva práticas espirituais sólidas, formação de caráter e aprendizado para servir com excellence no corpo de Cristo.
+                        </p>
+                        <div class="track-stats">
+                            <span>🙏 Práticas</span>
+                            <span>👥 Comunidade</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Começar</a>
+                    </div>
+                </div>
+                
+                <!-- Trilha de Liderança -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <h3>Trilha de Liderança</h3>
+                        <p>Para líderes e aspirantes</p>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-details">
+                            <span>4 módulos</span>
+                            <span>Avançado</span>
+                        </div>
+                        <p class="track-description">
+                            Desenvolva habilidades de liderança cristã com foco em serviço, gestão de pessoas e tomada de decisões sábias sob pressão.
+                        </p>
+                        <div class="track-stats">
+                            <span>👨‍💼 Liderança</span>
+                            <span>⚖️ Gestão</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Começar</a>
+                    </div>
+                </div>
+                
+                <!-- Dashboard de Estações -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <h3>Dashboard de Estações</h3>
+                        <p>Visão geral de todas as trilhas</p>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-details">
+                            <span>Portal integrado</span>
+                            <span>Para todos</span>
+                        </div>
+                        <p class="track-description">
+                            Uma interface unificada que permite navegar facilmente entre todas as nossas trilhas de formação, vendo onde você está em cada jornada.
+                        </p>
+                        <div class="track-stats">
+                            <span>🧭 Navegação</span>
+                            <span>📊 Progresso</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Acessar</a>
+                    </div>
+                </div>
+                
+                <!-- Panorama Bíblico -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <h3>Panorama Bíblico</h3>
+                        <p>Entendendo as Escrituras</p>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-details">
+                            <span>Série de vídeos</span>
+                            <span>Para todos</span>
+                        </div>
+                        <p class="track-description">
+                            Uma jornada visual pelos livros da Bíblia, desde Gênesis até Apocalipse, ajudando você a entender o plano redentor de Deus de forma clara e aplicável.
+                        </p>
+                        <div class="track-stats">
+                            <span>🎥 Vídeos</span>
+                            <span>📚 Bíblia</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Assistir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Comunidade Vitral. Todos os direitos reservados.</p>
+            <p>Academia de Ensino - Portal de aprendizado e formação cristã</p>
+        </div>
+    </footer>
+</body>
+</html>
